@@ -43,11 +43,16 @@ apt-get install git
 create a github profile and a repository for this task
 ###
 create directory for local git repo "skills2022"
+### 
+create a personal access token 
 
 Imlementation:
 
 ![изображение](https://user-images.githubusercontent.com/44508549/192087944-bdad3101-9333-4392-b0f3-477cbd007b91.png)
 
+![изображение](https://user-images.githubusercontent.com/44508549/192088483-701e3ac1-2ce4-4e48-8db7-ea057dbf566a.png)
+
+![изображение](https://user-images.githubusercontent.com/44508549/192088550-1dde1ea3-433b-4729-9a12-cba5e15d4fe7.png)
 
 
 
