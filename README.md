@@ -36,7 +36,7 @@ Create a folder “Skills2022” in your DEVASC virtual machine and start a git 
 ● Take screenshots indicating the success of your actions.
 ● At the end finalize the README.me file indicating the list of all the tasks and your remarks.
 
-Preparations:
+Preparations: \n
 apt-get update && upgrade
 apt-get install git
 ####
