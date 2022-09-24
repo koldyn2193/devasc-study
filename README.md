@@ -88,6 +88,14 @@ add the following lines to the hosts file
 [webservers]
 192.0.2.3 ansible_ssh_user=devasc ansible_ssh_pass=cisco123!
 
+edit ansible.cfg file:
+[defaults]
+# Use local hosts file in this folder
+inventory=./home/devasc/Desktop/skills2022/task2 
+# Don't worry about RSA Fingerprints
+host_key_checking = False 
+# Do not create retry files
+retry_files_enabled = False 
 
 
 
