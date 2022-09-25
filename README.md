@@ -220,35 +220,49 @@ Create a unittest script in Python that asserts the output of all the functions 
 
 Python Module: (save the code with any name of your choice)
 ```python
+#usr/bin/python3
 def factors(n):
-p = 2
-f = list()
-while n >= p*p :
-if n % p == 0:
-f.append(p)
-n = int(n / p)
-else:
-p = p + 1
-f.append(n)
-return f
+	p = 2
+	f = list()
+	while n >= p*p :
+		if n % p == 0:
+			f.append(p)
+			n = int(n / p)
+		else:
+			p = p + 1
+	f.append(n)
+	return f
+
+print(factors(4))
+
 def is_prime(number):
-if number <= 1:
-return False
-for n in range(2, number):
-if number % n == 0:
-return False
-else:
-return True
+	if number <= 1:
+		return False
+	for n in range(2, number):
+		if number % n == 0:
+			return False
+	else:
+		return True
+
+#print(is_prime(11))
+
 def vowels(text):
-v = list()
-for i in text:
-if i in 'aeiouAEIOU':
-v.append(i)
-return v
+	v = list()
+	for i in text:
+		if i in 'aeiouAEIOU':
+			v.append(i)
+	return v
+
+#print(vowels("qwrasd"))
+
 #len() is builtin function to determine the length of a sequence. Write a unit test for len()
+
+#print(len("12345")
 ```
 
 ### Preparations: 
+apt-get install python3 
+
 ### Imlementation:
 ### Troubleshooting:
 ### Verification:
