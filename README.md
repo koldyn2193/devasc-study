@@ -146,6 +146,8 @@ no apache services needed to be restarted after updates in configs, added handle
 
 ### Verification:
 in file output-task2
+
+
 ![изображение](https://user-images.githubusercontent.com/44508549/192143501-7aa06123-5a9b-451e-84a2-ee0a6ac7a13b.png)
 
 
@@ -168,9 +170,31 @@ https://chrony.tuxfamily.org/faq.
 
 
 ### Preparations: 
+apt-get install docker
+apt-get install docker-compose
+git clone https://github.com/cturra/docker-ntp
+
+![изображение](https://user-images.githubusercontent.com/44508549/192144526-a3fa935d-7070-4fee-a9dd-08f753338d22.png)
+
 
 ### Imlementation:
+docker-compose -d ntp
+
+![изображение](https://user-images.githubusercontent.com/44508549/192144535-ab981fac-e8ea-48f3-aee0-48230c1e342c.png)
+
+docker-compose logs ntp
+
+![изображение](https://user-images.githubusercontent.com/44508549/192144580-6ba189d8-99ce-4603-80c6-dae3ddbfbddb.png)
+
 
 ### Troubleshooting:
+change version in docker-compose.yaml to 3.3 instead of 3.9
 
 ### Verification:
+
+![изображение](https://user-images.githubusercontent.com/44508549/192144699-2a1c8dfc-e756-46e1-93ea-92da3423729a.png)
+
+![изображение](https://user-images.githubusercontent.com/44508549/192144802-99e1b74b-e355-4f5a-8671-ad40f7a7f7ab.png)
+
+
+
