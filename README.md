@@ -219,7 +219,7 @@ Create a unittest script in Python that asserts the output of all the functions 
 
 
 Python Module: (save the code with any name of your choice)
-'''
+```
 def factors(n):
 p = 2
 f = list()
@@ -246,7 +246,7 @@ if i in 'aeiouAEIOU':
 v.append(i)
 return v
 #len() is builtin function to determine the length of a sequence. Write a unit test for len()
-'''
+```
 
 ### Preparations: 
 ### Imlementation:
