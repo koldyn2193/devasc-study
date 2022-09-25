@@ -205,7 +205,7 @@ Create a Jenkins pipeline
 ● Create a Jenkins pipeline in which you download the necessary scripts and files from a GitHub repository and install the service from task 3 in a docker container.
 ● Take screenshots indicating the success of your actions and save script files.
 
-Cant proceed, because not enough memory on pc to support vm with jenkins even with 6gb hard lags
+###Cant proceed, because not enough memory on pc to support vm with jenkins even with 6gb hard lags
 
 
 ## Task 5 -- Unit Testing (20 points)
@@ -262,7 +262,53 @@ def vowels(text):
 
 ### Preparations: 
 apt-get install python3 
+python3 -m unittest
 
 ### Imlementation:
+
+```python
+import pr
+import unittest
+
+
+class testfactors(unittest.TestCase):
+
+    def test_facrors(self):
+        result = pr.factors(4)
+        self.assertEqual(result, [2, 2])
+
+
+class testisprime(unittest.TestCase):
+
+    def test_is_prime(self):
+
+        result = pr.is_prime(11)
+        self.assertEqual(result, True)
+
+
+class testvowels(unittest.TestCase):
+
+    def test_vowels(self):
+
+        result = pr.vowels("qwrasdeib")
+        self.assertEqual(result, ['a', 'e', 'i'])
+
+
+class testlen(unittest.TestCase):
+
+    def test_len(self):
+
+        result = len("1234567890")
+        self.assertEqual(result, 10)
+
+
+if __name__ == '__main__':
+    unittest.main()
+
+```
 ### Troubleshooting:
+
 ### Verification:
+
+![изображение](https://user-images.githubusercontent.com/44508549/192150546-aa406967-5c36-4db4-8c7d-a36954bc3bf8.png)
+
