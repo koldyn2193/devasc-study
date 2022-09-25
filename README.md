@@ -1,5 +1,5 @@
 # devasc-study
-Software Systems, Technologies and Security
+## Software Systems, Technologies and Security
 
 Seminar on Software Systems, Technologies and Security
 There are practical tasks about the following topics:
@@ -24,7 +24,7 @@ Submission:
 
 
 
-Task 1 -- GitHub Skills Test (25 points)
+## Task 1 -- GitHub Skills Test (25 points)
 >Task name:
 Manage GitHub scripts and documents
 >Task description:
@@ -36,17 +36,17 @@ Create a folder “Skills2022” in your DEVASC virtual machine and start a git 
 ● Take screenshots indicating the success of your actions.
 ● At the end finalize the README.me file indicating the list of all the tasks and your remarks.
 
-Preparations: 
+### Preparations: 
 apt-get update && upgrade
 apt-get install git
-####
+
 create a github profile and a repository for this task
-###
+
 create directory for local git repo "skills2022"
-### 
+
 create a personal access token 
 
-Imlementation:
+### Imlementation:
 
 ![изображение](https://user-images.githubusercontent.com/44508549/192087944-bdad3101-9333-4392-b0f3-477cbd007b91.png)
 
@@ -55,10 +55,10 @@ Imlementation:
 ![изображение](https://user-images.githubusercontent.com/44508549/192088550-1dde1ea3-433b-4729-9a12-cba5e15d4fe7.png)
 
 
-Troubleshooting:
+### Troubleshooting:
 forgot about PAC, created one
 
-Verification:
+### Verification:
 
 ![изображение](https://user-images.githubusercontent.com/44508549/192091059-072495bc-d977-461a-8181-ecd41c1c2d91.png)
 
@@ -66,7 +66,7 @@ Verification:
 
 
 
-Task 2 -- Ansible Skills Test (20 points)
+## Task 2 -- Ansible Skills Test (20 points)
 >Task name:
 Manage WebServers through Ansible.
 >Task description:
@@ -76,13 +76,13 @@ Write the Ansible script to install and test the websever with ping command in a
 ● Take screenshots indicating the success of your actions and save script files and related docs.
 
 
-Preparations: 
+### Preparations: 
 systemctl start ssh
 apt-get install openssh-server
 apt-get install sshpass
 apt-get install ansible
 
-Imlementation:
+### Imlementation:
 
 add the following lines to the hosts file
 [webservers]
@@ -90,11 +90,11 @@ add the following lines to the hosts file
 
 edit ansible.cfg file:
 [defaults]
-# Use local hosts file in this folder
+
 inventory=./hosts
-# Don't worry about RSA Fingerprints
+
 host_key_checking = False 
-# Do not create retry files
+
 retry_files_enabled = False 
 
 
@@ -141,17 +141,17 @@ create an ansible playbook:
 start ansible playbook 
 ansible-playbook -v playbook-apache-install.yaml
 
-Troubleshooting:
+### Troubleshooting:
 no apache services needed to be restarted after updates in configs, added handlers for that
 
-Verification:
+### Verification:
 in file output-task2
 ![изображение](https://user-images.githubusercontent.com/44508549/192143501-7aa06123-5a9b-451e-84a2-ee0a6ac7a13b.png)
 
 
 
 
-Task 3 -- Docker (25 points)
+## Task 3 -- Docker (25 points)
 >Task name:
 Manage Docker microservices
 >Task description:
@@ -167,10 +167,10 @@ https://github.com/cturra/docker-ntp
 https://chrony.tuxfamily.org/faq.
 
 
-Preparations: 
+### Preparations: 
 
-Imlementation:
+### Imlementation:
 
-Troubleshooting:
+### Troubleshooting:
 
-Verification:
+### Verification:
