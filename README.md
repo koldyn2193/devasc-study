@@ -24,7 +24,7 @@ Submission:
 
 
 
-Task 1 -- GitHub Skills Test
+Task 1 -- GitHub Skills Test (25 points)
 >Task name:
 Manage GitHub scripts and documents
 >Task description:
@@ -55,4 +55,50 @@ Imlementation:
 ![изображение](https://user-images.githubusercontent.com/44508549/192088550-1dde1ea3-433b-4729-9a12-cba5e15d4fe7.png)
 
 
+Troubleshooting:
+forgot about PAC, created one
 
+Verification:
+
+![изображение](https://user-images.githubusercontent.com/44508549/192091059-072495bc-d977-461a-8181-ecd41c1c2d91.png)
+
+![изображение](https://user-images.githubusercontent.com/44508549/192091394-9d9d15a9-59f5-4c16-be04-91d5dc1f5b0c.png)
+
+
+
+Task 2 -- Ansible Skills Test (20 points)
+>Task name:
+Manage WebServers through Ansible.
+>Task description:
+Write the Ansible script to install and test the websever with ping command in a single playbook. Choose either Apache or Nginx server based on your own preference.
+● Name the playbook WEBSERVER INSTALLATION AND TESTING.
+● TWO tasks must be successful to get grade (Installation and Testing).
+● Take screenshots indicating the success of your actions and save script files and related docs.
+
+
+Preparations: 
+systemctl start ssh
+apt-get install openssh-server
+apt-get install sshpass
+apt-get install ansible
+
+Imlementation:
+
+add the following lines to the hosts file
+[webservers]
+192.0.2.3 ansible_ssh_user=devasc ansible_ssh_pass=cisco123!
+
+edit ansible.cfg file:
+[defaults]
+# Use local hosts file in this folder
+inventory=./home/devasc/Desktop/skills2022/task2 
+# Don't worry about RSA Fingerprints
+host_key_checking = False 
+# Do not create retry files
+retry_files_enabled = False 
+
+
+
+Troubleshooting:
+
+Verification:
