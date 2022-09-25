@@ -197,4 +197,55 @@ change version in docker-compose.yaml to 3.3 instead of 3.9
 ![изображение](https://user-images.githubusercontent.com/44508549/192144802-99e1b74b-e355-4f5a-8671-ad40f7a7f7ab.png)
 
 
+## Task 4 -- Jenkins (10 points)
+>Task name:
+CI/CD Pipeline using Jenkins
+>Task description:
+Create a Jenkins pipeline
+● Create a Jenkins pipeline in which you download the necessary scripts and files from a GitHub repository and install the service from task 3 in a docker container.
+● Take screenshots indicating the success of your actions and save script files.
 
+
+
+## Task 5 -- Unit Testing (20 points)
+>Task name:
+Unit testing
+>Task description:
+Create a unittest script in Python that asserts the output of all the functions in the given Python module.
+>Task execution:
+● Complete the unit test for the given module. At least 3 out of 4 tests must be successful to get a score for this part.
+● Take screenshots indicating the success of your actions and save script files in the repository.
+
+
+Python Module: (save the code with any name of your choice)
+def factors(n):
+p = 2
+f = list()
+while n >= p*p :
+if n % p == 0:
+f.append(p)
+n = int(n / p)
+else:
+p = p + 1
+f.append(n)
+return f
+def is_prime(number):
+if number <= 1:
+return False
+for n in range(2, number):
+if number % n == 0:
+return False
+else:
+return True
+def vowels(text):
+v = list()
+for i in text:
+if i in 'aeiouAEIOU':
+v.append(i)
+return v
+#len() is builtin function to determine the length of a sequence. Write a unit test for len()
+
+### Preparations: 
+### Imlementation:
+### Troubleshooting:
+### Verification:
