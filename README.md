@@ -205,6 +205,7 @@ Create a Jenkins pipeline
 ● Create a Jenkins pipeline in which you download the necessary scripts and files from a GitHub repository and install the service from task 3 in a docker container.
 ● Take screenshots indicating the success of your actions and save script files.
 
+Cant proceed, because not enough memory on pc to support vm with jenkins even with 6gb hard lags
 
 
 ## Task 5 -- Unit Testing (20 points)
@@ -218,6 +219,7 @@ Create a unittest script in Python that asserts the output of all the functions 
 
 
 Python Module: (save the code with any name of your choice)
+'''
 def factors(n):
 p = 2
 f = list()
@@ -244,6 +246,7 @@ if i in 'aeiouAEIOU':
 v.append(i)
 return v
 #len() is builtin function to determine the length of a sequence. Write a unit test for len()
+'''
 
 ### Preparations: 
 ### Imlementation:
