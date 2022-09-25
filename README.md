@@ -98,6 +98,78 @@ host_key_checking = False
 retry_files_enabled = False 
 
 
+create an ansible playbook:
+
+
+---
+- hosts: webservers
+  become: yes
+  tasks:
+   - name: INSTALL APACHE2
+     apt: name=apache2 update_cache=yes state=latest
+ 
+   - name: ENABLED MOD_REWRITE
+     apache2_module: name=rewrite state=present
+     notify:
+       - RESTART APACHE2
+ 
+   - name: APACHE2 LISTEN ON PORT 8081
+     lineinfile: dest=/etc/apache2/ports.conf regexp="^Listen 80" line="Listen 8081" state=present
+     notify:
+       - RESTART APACHE2
+ 
+   - name: APACHE2 VIRTUALHOST ON PORT 8081
+     lineinfile: dest=/etc/apache2/sites-available/000-default.conf regexp="^<VirtualHost \*:80>" line="<VirtualHost *:8081>" state=present
+     notify:
+       - RESTART APACHE2
+ 
+  handlers:
+   - name: RESTART APACHE2
+     service: name=apache2 state=restarted
+
+- hosts: webservers
+  become: yes
+  tasks:
+   - name: ping
+     action: ping
+     ignore_errors: true
+   - name: curl
+     shell: curl 192.0.2.3:8081     
+     ignore_errors: true
+
+
+start ansible playbook 
+ansible-playbook -v playbook-apache-install.yaml
+
+Troubleshooting:
+no apache services needed to be restarted after updates in configs, added handlers for that
+
+Verification:
+in file output-task2
+![изображение](https://user-images.githubusercontent.com/44508549/192143501-7aa06123-5a9b-451e-84a2-ee0a6ac7a13b.png)
+
+
+
+
+Task 3 -- Docker (25 points)
+>Task name:
+Manage Docker microservices
+>Task description:
+Create a docker microservice
+● Create a docker “ntp service” (based on the information in the following urls)
+● Adapt configuration elements according to your network context. ● Only a basic ntp server is required. Detailed ntp configuration elements are out of scope.
+● Take screenshots indicating the success of your actions and save script files and related docs.
+>Task source files:
+Here is a selection of the many docker or GitHub webpages. URL:
+https://hub.docker.com/r/ntpd/ntpd
+https://github.com/linuxkit/linuxkit/blob/master/pkg/openntpd/Dockerfile https://hub.docker.com/r/cturra/ntp
+https://github.com/cturra/docker-ntp
+https://chrony.tuxfamily.org/faq.
+
+
+Preparations: 
+
+Imlementation:
 
 Troubleshooting:
 
